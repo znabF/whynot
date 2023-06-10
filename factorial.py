@@ -4,7 +4,7 @@ def main():
 
     i = number
     factorial = number
-    while(not i = 0):
+    while(i != 0):
         lessThan = i - 1
         if(lessThan == 0):
             break
