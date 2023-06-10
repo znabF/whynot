@@ -8,7 +8,7 @@ def main():
         lessThan = i - 1
         if(lessThan == 0):
             break
-        factorial = i * lessThan
+        factorial = factorial * lessThan
         i = i - 1
     return factorial
 
