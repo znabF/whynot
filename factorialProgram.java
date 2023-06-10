@@ -10,7 +10,7 @@ class Main {
     
     int factorial = number;
     int i = number;
-    while(i <= 0){
+    while(i != 0){
       int lessThan = i - 1;
       if(lessThan == 0){
         break;
