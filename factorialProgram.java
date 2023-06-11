@@ -5,6 +5,8 @@ class Main {
   // capturing what the user types
     Scanner sc = new Scanner(System.in);
     String input = sc.nextLine();
+
+    sc.close();
     
     int number = Integer.parseInt(input);
     
