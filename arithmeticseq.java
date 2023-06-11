@@ -14,15 +14,23 @@ class Arithmetic{
     int startNumber = Integer.parseInt(start);
     int numOfTerms = Integer.parseInt(terms);
     int cd = Integer.parseInt(difference);
-    int[] sequence = new int[numOfTerms];
+
+    int real = numOfTerms + 1;
+    int[] sequence = new int[real];
     sequence[0] = startNumber;
-    for(int i = 1; i < numOfTerms + 1; i++){
-        sequence[i] = startNumber + cd;
+    for(int i = 1; i < sequence.length; i++){
+        int part = i - 1;
+        if(part == 0){
+            sequence[i] = startNumber + cd;
+        }
+        sequence[i] = startNumber + cd * part;
     }
     
-    for(int i = 0; i < sequence.length; i++){
-        System.out.println(sequence[i]);
+    System.out.print("Sequence: ");
+    for(int i = 1; i < sequence.length; i++){
+        System.out.print(sequence[i] +  " ");
     }
+    System.out.println();
     
 }
 }
