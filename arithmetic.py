@@ -16,5 +16,6 @@ def generate():
     print("Sequence: ", end="")
     for i in range(numOfTerms):
         print(sequence[i], end=" ")
+    print()
 
 generate()
