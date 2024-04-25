@@ -1,40 +1,40 @@
-import java.util.*; 
-import java.lang.*;
+import java.util.*;
+
 class Geo {
-  public static void main(String[] args) {
-    Scanner sc = new Scanner(System.in);
-    System.out.println("Enter start: ");
-    String start = sc.nextLine();
-    System.out.println("Enter # of terms: ");
-    String terms = sc.nextLine();
-    System.out.println("Enter common ratio: ");
-    String common = sc.nextLine();
-    sc.close();
+    public static void main(String[] args) {
+      Scanner scanner = new Scanner(System.in);
 
-    // integer conversions
-    int startNumber = Integer.parseInt(start);
-    int numOfTerms = Integer.parseInt(terms);
-    int common_ratio = Integer.parseInt(common);
+      System.out.println("Enter the first term (a) of the geometric sequence:");
+      double firstTerm = scanner.nextDouble();
 
-    int length = numOfTerms + 1;
+      System.out.println("Enter the common ratio (r) of the geometric sequence:");
+      double commonRatio = scanner.nextDouble();
 
-    int[] geo_seq = new int[length];
+      System.out.println("Enter the number of terms you want in the sequence:");
+      int numTerms = scanner.nextInt();
 
-    geo_seq[0] = startNumber;
 
-    for(int i = 0; i < length; i++){
-      int prev_index = i - 1;
+        // Integer conversions
+        double startNumber = Double.parseDouble(start);
+        double numOfTerms = Double.parseDouble(terms);
+        double commonRatio = Double.parseDouble(common);
 
-      if(prev_index == 0){
-        geo_seq[i] = startNumber * common_ratio;
-      }
-      geo_seq[i] = startNumber * Math.pow(common_ratio, i);
+        int length = (int) numOfTerms;
+
+        double[] geoSeq = new double[length];
+
+        // geoSeq[0] = startNumber;
+        // updating this variable each iteration
+        double termTrak = startNumber;
+        for (int i = 1; i < length; i++) {
+            System.out.print(termTrak + " ");
+            // if this is second iteration is multiples then sets the multiplied value equal to it so each iteration a termTrak will be printed.
+            term *= commonRatio; 
+        }
+
+        System.out.println("Geometric Sequence: ");
+        for (int j = 0; j < length; j++) {
+            System.out.print(geoSeq[j] + " ");
+        }
     }
-
-    System.out.println("Geometric Sequence: ");
-    for(int j = 0; j < length; j++){
-      System.out.print(geo_seq[j] + " ");
-    }
-
-  }
 }
